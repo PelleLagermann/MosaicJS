@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MosaicJS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="demo/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="demo/favicon.ico" type="image/x-icon">
+
+
+		<link rel="stylesheet" href="demo/stylesheets/css/site.css" />
+		<link rel="stylesheet" href="demo/stylesheets/css/mosaic.css" />		
+
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Coiny&text=%22" rel="stylesheet">		
+	</head>
+	<body>
+        <header class="site-header">
+			<div class="container site-header__content">
+				<div class="logo">
+					<div class="logo__square"></div>
+					<div class="logo__square"></div>
+					<div class="logo__square"></div>
+					<div class="logo__square br"></div>
+				</div>
+				
+				<h1 class="site-title">Mosaic<span class="site-title__JS">JS</span></h1>
+
+				<img src="demo/images/pelleLagermann.png" class="profile-picture" />
+			</div>
+		</header>
+
+		<div class="container">			
+			<div id="app" class="deck" data-mosaicjs>
+				<div class="card" v-for="card in shuffleCards(cards)">
+					<div class="card-header" v-bind:style="{ backgroundImage: 'url(demo/images/cards/' + card.image + ')' }">
+						<div class="card-header-inner">
+							<h2 class="card-header-title">{{card.name}}</h2>							
+						</div>						
+					</div>
+					
+					<div class="card-content">
+						<div class="quote">"</div>						
+						<p class="card__text" v-html="card.quote"></p>						
+					</div>
+				</div>
+			</div>
+        </div>
+		
+		
+		<script src="demo/js/vue.min.js"></script>
+		<script src="demo/js/mosaic.min.js"></script>
+		<script src="demo/js/cards.js"></script>
+		<script src="demo/js/demo.js"></script>		
+		<script>
+			var mosaic = mosaicjs({
+				animationDelay: 30
+			});			
+		</script>
+    </body>
+</html>

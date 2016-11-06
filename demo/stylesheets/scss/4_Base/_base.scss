@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: $background-color;
+    color: $font-color;
+}
+
+h1, h2, h3 {
+    font-family: 'Poiret One', cursive;
+}
+
+.page-title {
+    margin: 0 0 1.5em;
+    text-align: center;
+    font-size: 4rem;    
+}
+.page-title__JS {
+    display: inline-block;    
+    transform: rotate(-90deg);
+    color: $contrast-color;
+}
+

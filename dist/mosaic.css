@@ -1,0 +1,50 @@
+[data-mosaicjs] {
+  margin: 0 -1.5em;
+}
+
+.mosaicjs-column {
+  padding: 0 1.5em;
+  float: left;
+}
+
+.mosaicjs-item {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Animations borrowed from Animate.css */
+/* https://daneden.github.io/animate.css/ */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}

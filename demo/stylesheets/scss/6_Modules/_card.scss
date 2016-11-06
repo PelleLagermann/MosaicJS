@@ -1,0 +1,87 @@
+.card {
+    max-width: 100%;
+    margin-bottom: 3em;
+
+    &:hover {
+        .card-header-inner {
+            background-color: rgba(0,0,0,0.2);
+        }        
+        
+        .card-header-title {
+            opacity: 0.3;            
+        }
+
+        .quote {
+            color: #999;
+        }
+    }
+}
+
+.card-header {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-size: cover;    
+}
+
+.card-header-inner {
+    position: absolute;    
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;        
+}   
+
+.card-header-title {    
+    flex-basis: 70%;  
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    padding: 7px 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.card-content {
+    position: relative;
+    padding: 1em 2em;    
+    border: 1px solid shade($background-color, 20%); 
+}
+
+.card__text {
+    font-size: 1.3em;
+
+    /*&::before,
+    &::after {
+        display: inline-block;
+        position: relative;
+        top: 0.2em;
+        content: "\"";
+        font-family: 'Coiny', cursive;
+        font-size: 2em;
+        line-height: 0.1;
+        color: $contrast-color;        
+    }
+    &::before {
+        margin-right: 0.2em;
+    }
+    &::after {
+        margin-left: 0.2em;
+    }*/
+}
+.quote {
+    position: absolute;
+    top: 0;
+    left: 0.25em;    
+    font-family: 'Coiny', cursive;
+    font-size: 4em;
+    line-height: 1;    
+    color: $contrast-color;
+    transition: all 0.4s ease-in-out;
+}

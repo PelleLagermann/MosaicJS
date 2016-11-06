@@ -1,0 +1,23 @@
+@mixin bp-xs {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin bp-sm {
+  @media (max-width: 991px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bp-md {
+  @media (max-width: 1199px) and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin bp-lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
